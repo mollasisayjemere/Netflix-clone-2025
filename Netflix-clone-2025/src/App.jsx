@@ -1,14 +1,14 @@
 import { useState } from 'react'
+import Home from './Pages/Home/Home.jsx'
+
 
 
 function App() {
   
 
   return (
-    <>
-      <div>
-      Molla
-      </div>
+    <>  
+      <Home/>
       
     </>
   )
