@@ -1,7 +1,5 @@
-
-
 import React, { useState, useEffect } from "react";
-import axios from "axios";
+import instance  from "../utils/Axios/";
 import requests from "../utils/Request"; //  <--- CORRECT IMPORT STATEMENT
 import bannerStyle from "./Banner.module.css"; // Assuming you have a CSS module named Banner.module.css
 
@@ -11,7 +9,7 @@ const Banner = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const request = await axios.get(requests.fetchNetflixOriginals);
+        const request = await instance.get(requests.fetchNetflixOriginals);
         console.log(request.data);
 
         if (
