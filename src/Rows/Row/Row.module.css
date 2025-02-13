@@ -1,0 +1,38 @@
+
+.row {
+  /* margin-bottom: 2px; */
+  color: #fff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4); /* Example shadow */
+  padding: 10px; /* Add some padding to separate content from shadow */
+  border-radius: 5px; /* Optional: Round the corners */
+  background-color: #141414; /* Add the background to make the shadow visible. */
+}
+
+.row h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+
+.row_posters {
+  display: flex;
+  overflow-x: auto;
+  padding: 20px;
+}
+
+.row_poster {
+  width: 200px;
+  object-fit: contain;
+  margin-right: 10px;
+  transition: transform 450ms;
+  cursor: pointer;
+}
+
+.row_poster:hover {
+  transform: scale(1.1);
+}
+
+.row_posterLarge {
+  width: 300px;
+}
