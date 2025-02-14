@@ -1,30 +1,4 @@
-// // RowList.jsx
-// import React from "react";
-// import Row from "../../Rows/Row/Row";
-// import rowListStyle from "./RowList.module.css";
-// import requests from "../../utils/Request";
 
-// export const RowList = () => {
-//   return (
-//     <div className={rowListStyle.rowListContainer}>
-//       <Row
-//         title="Netflix Originals"
-//         fetchUrl={requests.fetchNetflixOriginals}
-//         isLargeRow
-//       />
-//       <Row title="Trending Now" fetchUrl={requests.fetchTrending} />
-//       <Row title="Top Rated" fetchUrl={requests.fetchTopRatedMovies} />{" "}
-//       {/* Added a third row */}
-//       <Row title="Action Movies" fetchUrl={requests.fetchActionMovies} />
-//       {/* Added a fourth row */}
-//       {/* Add more rows for other categories */}
-//     </div>
-//   );
-// };
-
-// export default RowList;
-
-// RowList.jsx
 import React from 'react';
 import Row from "../../Rows/Row/Row";
 import rowListStyle from "./RowList.module.css";
