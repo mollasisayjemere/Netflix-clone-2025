@@ -1,13 +1,13 @@
 {
-  "homepage": "http:mollasisayjemere.githup.io/Netflix-clone-2025",
+  "homepage": "https://mollasisayjemere.github.io/Netflix-clone-202",
   "name": "netflix-clone-2025",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "predeploy":"npm run build",
-    "deploy":"gh-pages -d build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
