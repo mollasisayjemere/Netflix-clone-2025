@@ -73,9 +73,10 @@ body { /* Or the container of content ABOVE the footer */
 
 .footer_icons {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   margin-bottom: 20px;
   font-size: 1.5rem; /* Adjust icon size as needed */
+  margin-left: 40px;
 }
 
 .footer_icons > * { /* Target direct children of footer_icons */
@@ -107,13 +108,17 @@ body { /* Or the container of content ABOVE the footer */
 .service_code {
   margin-top: 20px;
   text-align: center;
+  border: 1px solid #fff;
+  width: 80% !important;
+  margin-left: 40px;
 }
 
 .copy-write {
   margin-top: 20px;
-  text-align: center;
+  text-align: start !important;
   font-size: 0.8rem;
   color: #aaa;
+  margin-left: 40px;
 }
 
 /* Media Queries for Responsiveness */
@@ -146,7 +151,7 @@ body { /* Or the container of content ABOVE the footer */
       text-align: left;
   }
   .copy-write {
-      width: 100%;
+      /* width: 100%; */
       text-align: left;
   }
 }

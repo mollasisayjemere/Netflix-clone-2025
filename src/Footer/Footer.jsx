@@ -7,47 +7,57 @@ import styles from "./Footer.module.css";
 
 const Footer = () => {
   return (
-    <div className={styles.footer_outer_container}>
-      <div className={styles.footer_inner_container}>
+    <div className={`container-fluid  ${styles.footer_outer_container}`}>
+      <div className={`container  ${styles.footer_inner_container}`}>
         <div className={styles.footer_icons}>
           <FacebookOutlinedIcon />
           <InstagramIcon />
           <YouTubeIcon />
         </div>
-        <div className={styles.footer_data}>
-          <div>
-            <ul>
+        <div className={`row text-center text-md-start ${styles.footer_data}`}>
+          <div className="col-sm-12 col-md-6 col-lg-3">
+            <ul className="list-unstyled">
               <li>Audio Description</li>
               <li>Investor Relations</li>
               <li>Legal Notice</li>
             </ul>
           </div>
-          <div>
-            <ul>
+          <div className="col-sm-12 col-md-6 col-lg-3">
+            <ul className="list-unstyled">
               <li>Help Center</li>
               <li>Jobs</li>
               <li>Cookie Preferences</li>
             </ul>
           </div>
-          <div>
-            <ul>
+          <div className="col-sm-12 col-md-6 col-lg-3">
+            <ul className="list-unstyled">
               <li>Gift Cards</li>
               <li>Terms of Use</li>
               <li>Corporate Information</li>
             </ul>
           </div>
-          <div>
-            <ul>
+          <div className="col-sm-12 col-md-6 col-lg-3">
+            <ul className="list-unstyled">
               <li>Media Center</li>
               <li>Privacy</li>
               <li>Contact Us</li>
             </ul>
           </div>
         </div>
-        <div className={styles.service_code}>
-          <p>Service Code</p>
+
+        <div>
+          <div
+            className={` text-sm-center text-md-start ${styles.service_code}`}
+          >
+            <p>Service Code</p>
+          </div>
+          <div
+            className={` text-sm-center text-md-start ${styles["copy-write"]}`}
+          >
+            {" "}
+            1997-2024 Netflix, Inc.
+          </div>
         </div>
-        <div className={styles["copy-write"]}> 1997-2024 Netflix, Inc.</div>
       </div>
     </div>
   );
