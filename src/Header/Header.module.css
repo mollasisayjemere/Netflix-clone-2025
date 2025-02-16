@@ -1,46 +1,79 @@
-.header_outer_container {
+ .header_outer_container {
   position: sticky;
   top: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: rgb(20, 20, 20);
-  /* background-color: transparent; */
   height: 10vh;
   color: #fff;
   transition: all 0.5s;
   transition-timing-function: ease-in;
   z-index: 1;
-  /* background-color: #d79b9b; */
 }
+
 .nav__black {
   background-color: rgb(20, 20, 20);
 }
+
 .header_container {
-  width: 90%;
+  width: 95%; /* Slightly wider for smaller screens */
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .header_left ul {
-  width: 140%;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   list-style: none;
   cursor: pointer;
-  /* background-color: lightblue; */
+  align-items: center; /* Vertically center items */
+  overflow-x: auto; /* Enable horizontal scrolling if items overflow */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+  -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
 }
-.header_right ul { 
-width: 100px;
+
+.header_left ul li {
+  white-space: nowrap; /* Prevent text from wrapping */
+  margin-right: 15px; /* Spacing between items */
+}
+
+.header_left ul li:first-child {
+  margin-right: auto; /* Push the logo to the left */
+}
+
+
+.header_right ul {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   list-style: none;
-  cursor: pointer; 
-  
+  cursor: pointer;
+  align-items: center; /* Vertically center icons */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
 }
-.header_right ul li { 
 
+.header_right ul li {
+  margin-left: 10px; /* Spacing between icons */
+}
 
+/* Media Query for larger screens */
+@media (min-width: 768px) {
+  .header_container {
+    width: 90%; /*reset*/
+  }
+  .header_left ul {
+    overflow-x: visible; /* Disable horizontal scrolling on larger screens */
+    width: 140%;
+    justify-content: space-between;
+  }
+  .header_left ul li:first-child {
+  margin-right: 15px; /*reset */
+}
+}
+
+@media (max-width: 480px) { /* Example: Extra small screens */
+  .header_left ul li:not(:first-child) { /* Hide text items */
+    display: none;
+  }
 }

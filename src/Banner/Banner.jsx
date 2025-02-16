@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import instance  from "../utils/Axios/";
-import requests from "../utils/Request"; //  <--- CORRECT IMPORT STATEMENT
+import requests from "../utils/Request"; 
 import bannerStyle from "./Banner.module.css"; // Assuming you have a CSS module named Banner.module.css
 
 const Banner = () => {

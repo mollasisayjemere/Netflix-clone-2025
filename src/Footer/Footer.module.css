@@ -1,40 +1,40 @@
-.footer_outer_container {
+/* .footer_outer_container { 
   background-color: #111;
   color: gray;
   display: flex;
-  justify-content: center;
-  /* background-color: red; */
-}
-.footer_inner_container {
+  justify-content: center; 
+   background-color: red;  
+} 
+/* .footer_inner_container {
   width: 60%;
-}
+} 
 
-.footer_icons {
+/* .footer_icons {
   width: 12%;
   display: flex;
   justify-content: space-between;
   margin-left: 10px;
   color: #fff;
-}
+} 
 
-.footer_data {
+/* .footer_data {
   display: flex;
   justify-content: space-between;
 }
 
-.footer_data ul {
+/* .footer_data ul {
   list-style: none;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   height: 12vh;
-}
+} 
 
 .footer_data ul li {
   cursor: pointer;
 }
 
-.service_code {
+/* .service_code {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -42,8 +42,118 @@
   width: 20%;
   margin: 10px 0;
   cursor: pointer;
-}
-.copy-write {
+} 
+
+/* .copy-write {
   font-size: 12px;
   margin-bottom: 10px;
+}  
+
+
+/* Footer.module.css */
+
+body { /* Or the container of content ABOVE the footer */
+  overflow-y: auto; /* Allow vertical scrolling if content overflows */
+  min-height: 100vh; /* Ensure the body takes at least the full viewport height */
+}
+
+.footer_outer_container {
+  background-color: #141414;
+  color: #fff;
+  padding: 20px;
+}
+
+.footer_inner_container {
+  display: flex;
+  flex-direction: column; /* Stack items vertically on smaller screens */
+  align-items: center; /* Center items horizontally */
+  max-width: 1200px; /* Limit width for larger screens */
+  margin: 0 auto; /* Center horizontally */
+}
+
+.footer_icons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  font-size: 1.5rem; /* Adjust icon size as needed */
+}
+
+.footer_icons > * { /* Target direct children of footer_icons */
+  margin: 0 10px; /* Add spacing between icons */
+}
+
+.footer_data {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  justify-content: center; /* Distribute items evenly */
+  width: 100%; /* Take up the full width */
+}
+
+.footer_data > div {
+  margin: 10px;
+  min-width: 150px; /* Ensure each column has a minimum width */
+}
+
+.footer_data ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer_data li {
+  margin-bottom: 5px;
+}
+
+.service_code {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.copy-write {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+/* Media Queries for Responsiveness */
+
+@media (min-width: 768px) {
+  /* Medium screens and up */
+  .footer_inner_container {
+    flex-direction: row; /* Display items in a row */
+    flex-wrap: wrap; /* Allow items to wrap */
+    justify-content: space-between; /* Distribute items evenly */
+    align-items: flex-start; /* Align items to the top */
+  }
+
+  .footer_icons {
+    flex-basis: 100%; /* Take full width on larger screens */
+    text-align: left; /* Align icons to the left */
+    margin-bottom: 10px;
+  }
+
+  .footer_data {
+    justify-content: space-between; /* Distribute data columns evenly */
+  }
+
+  .footer_data > div {
+    flex-basis: 22%; /* Adjust width for each column */
+    margin: 0; /*Reset Margin*/
+  }
+  .service_code {
+      width: 100%;
+      text-align: left;
+  }
+  .copy-write {
+      width: 100%;
+      text-align: left;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* Large screens and up */
+  .footer_data > div {
+    flex-basis: auto; /* Reset flex-basis to auto for more natural distribution */
+  }
 }
