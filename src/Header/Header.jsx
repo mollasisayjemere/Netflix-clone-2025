@@ -10,7 +10,7 @@ import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
 const Header = () => {
   return (
     <>
-      <Navbar bg="dark" variant="dark" expand="lg">
+      <Navbar bg="dark" variant="dark" expand="lg" className='sticky-top'>
         {" "}
         {/* Dark background, white text, responsive expand */}
         <Container>
