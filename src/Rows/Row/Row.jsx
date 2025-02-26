@@ -66,6 +66,7 @@ const Row = ({ title, fetchUrl, isLargeRow = false }) => {
         ) : movies.length > 0 ? (
           movies.map((movie, index) => (
             <img
+              onError={(e) => (e.target.style.display = "none")}
               key={index}
               src={`${base_url}${
                 isLargeRow ? movie.poster_path : movie.backdrop_path

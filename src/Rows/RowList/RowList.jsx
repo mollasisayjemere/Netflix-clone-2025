@@ -16,7 +16,7 @@ export const RowList = () => {
       <Row title="Romance Movies" fetchUrl={requests.fetchRomanceMovies} />
       <Row title="Documentaries" fetchUrl={requests.fetchDocumentaries} />
       <Row title="Popular TV Shows" fetchUrl={requests.fetchTvShow} />
-      {/* Add more rows for other categories here */}
+      
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import axios from "Axios";
 const instance = axios.create({
-  baseURL: "https://api.themoviedb.org/3", // Corrected key name
+  baseURL: "https://api.themoviedb.org/3", 
 });
-export default instance; // Corrected: Export the instance
+export default instance; 
